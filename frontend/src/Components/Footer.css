@@ -1,0 +1,125 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f5deb3;
+  padding: 40px 20px 20px;
+}
+
+/* Main content */
+.footer-data {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Sections */
+.contact-details,
+.usefull-links,
+.librarian-details {
+  flex: 1;
+  min-width: 220px;
+  letter-spacing: 1.3px;
+}
+
+/* Titles */
+.contact-details h1,
+.usefull-links h1,
+.librarian-details h1 {
+  font-size: 22px;
+  color: #ff6b5a;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.contact-details h1::after,
+.usefull-links h1::after,
+.librarian-details h1::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #ff6b5a;
+  display: block;
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+/* Text */
+.contact-details p,
+.librarian-details p {
+  font-size: 15px;
+  margin: 6px 0;
+  opacity: 0.9;
+}
+
+/* Links */
+.usefull-links a {
+  color: #f5deb3;
+  text-decoration: none;
+  margin: 6px 0;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.usefull-links a:hover {
+  color: #ff6b5a;
+  padding-left: 6px;
+}
+
+/* Social icons */
+.contact-social {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social-icon {
+  margin: 0 12px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  color: #ff6b5a;
+}
+
+/* Copyright */
+.copyright-details {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 30px;
+}
+
+.copyright-details p {
+  font-size: 14px;
+  text-align: center;
+  padding: 15px 10px;
+  opacity: 0.85;
+}
+
+.copyright-details span {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-data {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-details,
+  .usefull-links,
+  .librarian-details {
+    align-items: center;
+  }
+
+  .usefull-links a:hover {
+    padding-left: 0;
+  }
+}

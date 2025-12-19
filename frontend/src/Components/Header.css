@@ -1,0 +1,155 @@
+/* =====================
+   HEADER (DESKTOP)
+===================== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: linear-gradient(135deg, #10190d, #1c2a22);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+}
+
+/* Logo */
+.logo-nav a {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f3e6c9; /* soft gold */
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.logo-nav a:hover {
+  color: #ffffff;
+}
+
+/* Search */
+.search-input {
+  width: 100%;
+  max-width: 850px;
+  height: 42px;
+  padding: 0 18px;
+  font-size: 16px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+/* Nav Right */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Nav List */
+.nav-options {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 30px;
+}
+
+/* Nav Item */
+.option {
+  padding: 0 24px;
+}
+
+.option a {
+  color: #f3e6c9; /* soft gold */
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.option a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu Icon */
+.mobile-menu {
+  display: block;
+}
+
+/* Remove underline */
+a {
+  text-decoration: none;
+}
+
+/* =====================
+   DESKTOP GRID
+===================== */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 15% 55% 30%;
+  }
+}
+
+/* =====================
+   MOBILE VIEW
+===================== */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 15px;
+  }
+
+  .nav-options {
+    position: absolute;
+    top: 64px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 64px);
+    background: linear-gradient(180deg, #10190d, #1c2a22);
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+  }
+
+  .nav-options.active {
+    left: 0;
+    opacity: 1;
+    z-index: 999;
+  }
+
+  .option {
+    padding: 22px 0;
+  }
+
+  .option a {
+    font-size: 20px;
+  }
+
+  .menu-icon {
+    width: 44px;
+    height: 44px;
+    color: #1c2a22;
+    background-color: #f3e6c9;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-icon:hover {
+    transform: scale(1.05);
+  }
+}
